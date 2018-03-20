@@ -12,9 +12,11 @@
 		2D18EBA120615A3A00A5A125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D18EB9F20615A3A00A5A125 /* Main.storyboard */; };
 		2D18EBA320615A3A00A5A125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D18EBA220615A3A00A5A125 /* Assets.xcassets */; };
 		2D18EBA620615A3A00A5A125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D18EBA420615A3A00A5A125 /* LaunchScreen.storyboard */; };
+		70DB93B21F742E56B7DF75FC /* Pods_office_bell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE0993AA80567D74D7604E0 /* Pods_office_bell.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AE0993AA80567D74D7604E0 /* Pods_office_bell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_office_bell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D18EB9820615A3A00A5A125 /* office-bell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "office-bell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D18EB9B20615A3A00A5A125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D18EB9D20615A3A00A5A125 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		2D18EBA220615A3A00A5A125 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D18EBA520615A3A00A5A125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D18EBA720615A3A00A5A125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB6548038D737FACFABDD94D /* Pods-office-bell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-office-bell.release.xcconfig"; path = "Pods/Target Support Files/Pods-office-bell/Pods-office-bell.release.xcconfig"; sourceTree = "<group>"; };
+		F625868E4D0A6FC8AFC03748 /* Pods-office-bell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-office-bell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-office-bell/Pods-office-bell.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70DB93B21F742E56B7DF75FC /* Pods_office_bell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				2D18EB9A20615A3A00A5A125 /* office-bell */,
 				2D18EB9920615A3A00A5A125 /* Products */,
+				3C2731EA8EC6DE9B03E4AC2C /* Pods */,
+				53B9FFC087299F9D18F88FA8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "office-bell";
 			sourceTree = "<group>";
 		};
+		3C2731EA8EC6DE9B03E4AC2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F625868E4D0A6FC8AFC03748 /* Pods-office-bell.debug.xcconfig */,
+				BB6548038D737FACFABDD94D /* Pods-office-bell.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		53B9FFC087299F9D18F88FA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AE0993AA80567D74D7604E0 /* Pods_office_bell.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D18EBAA20615A3A00A5A125 /* Build configuration list for PBXNativeTarget "office-bell" */;
 			buildPhases = (
+				E889488DBC21546EF59615B6 /* [CP] Check Pods Manifest.lock */,
 				2D18EB9420615A3A00A5A125 /* Sources */,
 				2D18EB9520615A3A00A5A125 /* Frameworks */,
 				2D18EB9620615A3A00A5A125 /* Resources */,
+				33655098F986357A2C8C4119 /* [CP] Embed Pods Frameworks */,
+				C7B476BC85D67045A45F0784 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33655098F986357A2C8C4119 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-office-bell/Pods-office-bell-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7B476BC85D67045A45F0784 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-office-bell/Pods-office-bell-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E889488DBC21546EF59615B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2D18EB9420615A3A00A5A125 /* Sources */ = {
@@ -272,31 +347,35 @@
 		};
 		2D18EBAB20615A3A00A5A125 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F625868E4D0A6FC8AFC03748 /* Pods-office-bell.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZCJ3MX6LCJ;
 				INFOPLIST_FILE = "office-bell/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.akinobu.office-bell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
 		2D18EBAC20615A3A00A5A125 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB6548038D737FACFABDD94D /* Pods-office-bell.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZCJ3MX6LCJ;
 				INFOPLIST_FILE = "office-bell/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.akinobu.office-bell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
