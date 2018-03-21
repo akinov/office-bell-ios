@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MainViewController: UIViewController {
 
@@ -32,4 +33,42 @@ class MainViewController: UIViewController {
     }
     */
 
+    @IBAction func onClickBell(_ sender: Any) {
+        let headers: HTTPHeaders = [
+            "Authorization": UserDefaults.standard.string(forKey: "authentication_token")!
+        ]
+        Alamofire.request(
+            "http://192.168.11.7:3000/api/call",
+            headers: headers)
+            .responseJSON { response in
+                if let json = response.result.value as? [String: AnyObject] {
+                    if json["result"] as! Bool {
+                        self.showPingSuccessAlert()
+                    }
+                    else {
+                        self.showPingErrorAlert()
+                    }
+                }
+                else {
+                    self.showPingErrorAlert()
+                }
+            
+        }
+    }
+    
+    private func showPingErrorAlert() {
+        let alertController = UIAlertController(title: "呼び出しに失敗しました", message: "お手数ですが", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    private func showPingSuccessAlert() {
+        let alertController = UIAlertController(title: "呼び出しをしました", message: "少々お待ちください", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
 }

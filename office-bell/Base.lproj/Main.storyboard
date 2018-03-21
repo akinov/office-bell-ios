@@ -99,6 +99,9 @@
                                 <state key="normal" title="呼び出し">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onClickBell:" destination="mqi-H2-3zM" eventType="touchUpInside" id="e3Z-xZ-cw7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
