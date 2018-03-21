@@ -15,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        guard UserDefaults.standard.string(forKey: "authentication_token") != nil else {
+            return true
+        }
+        
+        let storyboard: UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
+        window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "mainViewController") as UIViewController
+        
         return true
     }
 
