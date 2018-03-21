@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2D18EB9C20615A3A00A5A125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18EB9B20615A3A00A5A125 /* AppDelegate.swift */; };
-		2D18EB9E20615A3A00A5A125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18EB9D20615A3A00A5A125 /* ViewController.swift */; };
+		2D18EB9E20615A3A00A5A125 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18EB9D20615A3A00A5A125 /* LoginViewController.swift */; };
 		2D18EBA120615A3A00A5A125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D18EB9F20615A3A00A5A125 /* Main.storyboard */; };
 		2D18EBA320615A3A00A5A125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D18EBA220615A3A00A5A125 /* Assets.xcassets */; };
 		2D18EBA620615A3A00A5A125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D18EBA420615A3A00A5A125 /* LaunchScreen.storyboard */; };
+		2D18EBAE2061EE9900A5A125 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18EBAD2061EE9900A5A125 /* MainViewController.swift */; };
 		70DB93B21F742E56B7DF75FC /* Pods_office_bell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE0993AA80567D74D7604E0 /* Pods_office_bell.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +20,12 @@
 		0AE0993AA80567D74D7604E0 /* Pods_office_bell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_office_bell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D18EB9820615A3A00A5A125 /* office-bell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "office-bell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D18EB9B20615A3A00A5A125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D18EB9D20615A3A00A5A125 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D18EB9D20615A3A00A5A125 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2D18EBA020615A3A00A5A125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D18EBA220615A3A00A5A125 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D18EBA520615A3A00A5A125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D18EBA720615A3A00A5A125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D18EBAD2061EE9900A5A125 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BB6548038D737FACFABDD94D /* Pods-office-bell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-office-bell.release.xcconfig"; path = "Pods/Target Support Files/Pods-office-bell/Pods-office-bell.release.xcconfig"; sourceTree = "<group>"; };
 		F625868E4D0A6FC8AFC03748 /* Pods-office-bell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-office-bell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-office-bell/Pods-office-bell.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,11 +64,12 @@
 			isa = PBXGroup;
 			children = (
 				2D18EB9B20615A3A00A5A125 /* AppDelegate.swift */,
-				2D18EB9D20615A3A00A5A125 /* ViewController.swift */,
+				2D18EB9D20615A3A00A5A125 /* LoginViewController.swift */,
 				2D18EB9F20615A3A00A5A125 /* Main.storyboard */,
 				2D18EBA220615A3A00A5A125 /* Assets.xcassets */,
 				2D18EBA420615A3A00A5A125 /* LaunchScreen.storyboard */,
 				2D18EBA720615A3A00A5A125 /* Info.plist */,
+				2D18EBAD2061EE9900A5A125 /* MainViewController.swift */,
 			);
 			path = "office-bell";
 			sourceTree = "<group>";
@@ -211,7 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D18EB9E20615A3A00A5A125 /* ViewController.swift in Sources */,
+				2D18EBAE2061EE9900A5A125 /* MainViewController.swift in Sources */,
+				2D18EB9E20615A3A00A5A125 /* LoginViewController.swift in Sources */,
 				2D18EB9C20615A3A00A5A125 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
