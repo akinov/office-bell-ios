@@ -33,13 +33,17 @@ class LoginViewController: UIViewController {
                 "password": passwordField.text!
             ])
             .responseJSON { response in
-                if let json = response.result.value as? [String:[String]] {
+                if let json = response.result.value as? [String: AnyObject] {
+                    // authentication_tokenを保存
                     UserDefaults.standard.set(json["authentication_token"], forKey: "authentication_token")
+
+                    // MainViewに遷移
                     let storyboard: UIStoryboard = self.storyboard!
                     let nextView = storyboard.instantiateViewController(withIdentifier: "mainViewController")
                     self.present(nextView, animated: true, completion: nil)
                 }
                 else {
+                    // ログイン失敗アラートを表示
                     let alertController = UIAlertController(title: "ログインに失敗しました", message: "正しいメールアドレス、パスワードをご入力ください", preferredStyle: UIAlertControllerStyle.alert)
                     
                     alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
