@@ -10,11 +10,16 @@ import UIKit
 import Alamofire
 
 class MainViewController: UIViewController {
-
+    @IBOutlet weak var bellButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
-        // Do any additional setup after loading the view.
+        setupBellButton()
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,5 +75,18 @@ class MainViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    private func setupBellButton() {
+        let minSize = [view.frame.width, view.frame.height].min()
+        let buttonSize = minSize! * CGFloat(0.6)
+
+        bellButton.frame = CGRect(
+            x: (view.frame.width - buttonSize) / 2,
+            y: (view.frame.height - buttonSize) / 2,
+            width: buttonSize,
+            height: buttonSize)
+        
+        bellButton.layer.cornerRadius = buttonSize / 2
     }
 }

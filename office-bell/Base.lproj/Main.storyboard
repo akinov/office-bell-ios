@@ -90,12 +90,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIo-mq-B03">
-                                <rect key="frame" x="37.5" y="193.5" width="300" height="300"/>
+                                <rect key="frame" x="126.5" y="319.5" width="122" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="RVZ-Zz-4ha"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="qIG-Jw-677"/>
-                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="呼び出し">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -111,6 +108,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kd2-Ea-ZHt"/>
                     </view>
+                    <connections>
+                        <outlet property="bellButton" destination="vIo-mq-B03" id="gn7-1D-90s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEL-Pe-Xai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
