@@ -18,6 +18,8 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.onOrientationDidChange(notification:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
 
         setupBellButton()
     }
@@ -64,29 +66,47 @@ class MainViewController: UIViewController {
     private func showPingErrorAlert() {
         let alertController = UIAlertController(title: "呼び出しに失敗しました", message: "お手数ですが", preferredStyle: UIAlertControllerStyle.alert)
         
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        self.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: { () -> Void in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
+                alertController.dismiss(animated: true, completion: nil)
+            })
+        })
     }
     
     private func showPingSuccessAlert() {
         let alertController = UIAlertController(title: "呼び出しをしました", message: "少々お待ちください", preferredStyle: UIAlertControllerStyle.alert)
         
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        self.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: { () -> Void in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
+                alertController.dismiss(animated: true, completion: nil)
+            })
+        })
     }
     
     private func setupBellButton() {
-        let minSize = [view.frame.width, view.frame.height].min()
-        let buttonSize = minSize! * CGFloat(0.6)
+        let isLandscape = UIDeviceOrientationIsLandscape(UIDevice.current.orientation)
+        let sizeArray = [view.frame.width, view.frame.height]
+        let minSize = sizeArray.min()!
+        let maxSize = sizeArray.max()!
+        let buttonSize = minSize * CGFloat(0.6)
+        var x = (minSize - buttonSize) / 2
+        var y = (maxSize - buttonSize) / 2
+        
+        if (isLandscape) {
+            x = (maxSize - buttonSize) / 2
+            y = (minSize - buttonSize) / 2
+        }
 
         bellButton.frame = CGRect(
-            x: (view.frame.width - buttonSize) / 2,
-            y: (view.frame.height - buttonSize) / 2,
+            x: x,
+            y: y,
             width: buttonSize,
             height: buttonSize)
         
         bellButton.layer.cornerRadius = buttonSize / 2
+    }
+    
+    @objc private func onOrientationDidChange(notification: NSNotification) {
+        setupBellButton()
     }
 }
