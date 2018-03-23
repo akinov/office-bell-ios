@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
             "Authorization": UserDefaults.standard.string(forKey: "authentication_token")!
         ]
         Alamofire.request(
-            "http://192.168.11.7:3000/api/call",
+            "https://office-bell.herokuapp.com/api/call",
             headers: headers)
             .responseJSON { response in
                 if let json = response.result.value as? [String: AnyObject] {

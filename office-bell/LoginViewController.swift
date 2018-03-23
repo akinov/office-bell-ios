@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func onClickLogin(_ sender: Any) {
         Alamofire.request(
-            "http://192.168.11.7:3000/api/sign_in",
+            "https://office-bell.herokuapp.com/api/sign_in",
             method: .post,
             parameters: [
                 "email": emailField.text!,
