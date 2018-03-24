@@ -11,6 +11,7 @@ import Alamofire
 
 class MainViewController: UIViewController {
     @IBOutlet weak var bellButton: UIButton!
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class MainViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.onOrientationDidChange(notification:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
 
         setupBellButton()
+        setConstraints()
     }
 
     override func didReceiveMemoryWarning() {
@@ -108,5 +110,18 @@ class MainViewController: UIViewController {
     
     @objc private func onOrientationDidChange(notification: NSNotification) {
         setupBellButton()
+    }
+    
+    private func setConstraints() {
+        // BellButtonのサイズが決まってから出ないと制約が付けられないのでコードで追加
+        self.view.addConstraint(NSLayoutConstraint(
+            item: label,
+            attribute: .top,
+            relatedBy: .equal,
+            toItem: bellButton,
+            attribute: .bottom,
+            multiplier: 1.0,
+            constant: 30
+        ))
     }
 }

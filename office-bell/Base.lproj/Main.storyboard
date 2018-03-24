@@ -93,7 +93,7 @@
                                 <rect key="frame" x="126.5" y="319.5" width="122" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="呼び出し">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -101,17 +101,28 @@
                                     <action selector="onClickBell:" destination="mqi-H2-3zM" eventType="touchUpInside" id="e3Z-xZ-cw7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ご用の方は「呼び出し」ボタンを押してください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rZ-55-sOX">
+                                <rect key="frame" x="20" y="559.5" width="335" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kd2-Ea-ZHt" firstAttribute="trailing" secondItem="4rZ-55-sOX" secondAttribute="trailing" constant="20" id="MMy-NC-Lc5"/>
+                            <constraint firstItem="4rZ-55-sOX" firstAttribute="leading" secondItem="Kd2-Ea-ZHt" secondAttribute="leading" constant="20" id="nUP-GD-LTZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kd2-Ea-ZHt"/>
                     </view>
                     <connections>
                         <outlet property="bellButton" destination="vIo-mq-B03" id="gn7-1D-90s"/>
+                        <outlet property="label" destination="4rZ-55-sOX" id="iu8-BZ-my4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEL-Pe-Xai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="32"/>
+            <point key="canvasLocation" x="1373.5999999999999" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
